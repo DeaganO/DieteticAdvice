@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22#"
+     xml:base="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Advice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Advice"/>
+    
+
+
+    <!-- http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/B11 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/B11">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Lab_value"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Supplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/B12 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/B12">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Lab_value"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Supplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Carbohydrate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Carbohydrate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Complaint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Complaint"/>
+    
+
+
+    <!-- http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/D -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/D">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Lab_value"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Supplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Dumping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Dumping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Complaint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Fat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Fat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Fatigue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Fatigue">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Complaint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Feeling_cold -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Feeling_cold">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Complaint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Food -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Food"/>
+    
+
+
+    <!-- http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Hair_loss -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Hair_loss">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Complaint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Iron -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Iron">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Lab_value"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Supplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Lab_value -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Lab_value"/>
+    
+
+
+    <!-- http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Multivitamines -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Multivitamines">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Lab_value"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Supplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Nausea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Nausea">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Complaint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Patient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Patient"/>
+    
+
+
+    <!-- http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Protein -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Protein">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Food"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Lab_value"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Supplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Stomach_ache -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Stomach_ache">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Complaint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Supplementation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Supplementation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Vomiting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Vomiting">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/skipovergoor/ontologies/2018/11/untitled-ontology-22/Complaint"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+
