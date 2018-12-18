@@ -74,11 +74,11 @@ def gather_general_info():
 def gather_lab_values():
     success = True
     lab_date = input("Please enter the date of the blood test:\n")
-    protein = input("Please enter the protein levels:\n")
-    B11  = input("Please enter the vitamin B11 levels:\n")
-    B12  = input("Please enter te vitamin B12 levels:\n")
-    D  = input("Please enter the vitamin D levels:\n")
-    iron  = input("Please enter the iron levels:\n")
+    protein = input("Please enter the protein levels (in g/l):\n")
+    B11  = input("Please enter the vitamin B11 levels (in nmol/l):\n")
+    B12  = input("Please enter te vitamin B12 levels (in pmol/l):\n")
+    D  = input("Please enter the vitamin D levels (in nmol/l):\n")
+    iron  = input("Please enter the iron levels (in mmol/l):\n")
     try:
         protein = float(protein)
         B11 = float(B11)
@@ -92,10 +92,10 @@ def gather_lab_values():
 
 def gather_intake_information():
     success = True
-    water = input("Please ask the patient how much water he drinks per day (in cl):\n")
+    water = input("Please ask the patient how much water he drinks per day (in ml):\n")
     water_possibility = True if input("Is the patient able to drink water? (True or False)\n") in ["True", "true"] else False
-    enough_movement = True if input("Does the patient move enough? (what is enough? True or False)\n") in ["True", "true"] else False
-    defecation_freq = input("Per day, how often does the patient defecate?\n")
+    enough_movement = True if input("Does the patient move at least 5 times per week? True or False)\n") in ["True", "true"] else False
+    defecation_freq = input("Per week, how often does the patient defecate?\n")
     right_defecation_consistency = True if input("Does the patient's defecation appear to have the right consistency? (True or False)\n") in ["True", "true"] else False
     eating_moments = input("How often does the patient eat per day?\n")
     divided_food_water = True if input("Does the patient eat and drink separately? (True or False)\n") in ["True", "true"] else False
@@ -110,6 +110,7 @@ def gather_intake_information():
     return success, water, water_possibility, enough_movement, defecation_freq, right_defecation_consistency, eating_moments, divided_food_water, slow_intake
 
 def gather_complaints():
+    success = True
     stomach_ache = True if input("Does the patient experience stomach aches? (True or False)\n") in ["True", "true"] else False
     vomiting = True if input("Does the patient vomit frequently? (True or False)\n") in ["True", "true"] else False
     feeling_cold = True if input("Does the patient feel constantly cold? (True or False)\n") in ["True", "true"] else False
@@ -117,7 +118,7 @@ def gather_complaints():
     dumping = True if input("Does the patient mention problems which hint at gastric dumping syndrome? (True or False)\n") in ["True", "true"] else False
     fatigue = True if input("Does the patient feel continuously tired? (True or False)\n") in ["True", "true"] else False
     nausea = True if input("Does the patient feel dizzy or nauseous frequently? (True or False)\n") in ["True", "true"] else False
-    return stomach_ache, vomiting, feeling_cold, hair_loss, dumping, fatigue, nausea
+    return success, stomach_ache, vomiting, feeling_cold, hair_loss, dumping, fatigue, nausea
 
 
 def give_advice(patient:Patient):
@@ -177,7 +178,7 @@ def give_advice(patient:Patient):
         print(SUPPLEMENT_B12)
 
     if patient.enough_movement == False:
-        print(MOVE_ENOUGH) #what is enough?
+        print(MOVE_ENOUGH)
 
     if patient.defecation_freq < 2:
         print(INSUFFICIENT_DEFECATION_ALARM)
