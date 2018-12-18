@@ -15,8 +15,36 @@ from patient import Patient
 WELCOME_STRING = '''Welcome to the dietetic advisory aiding system!
 This system is made to aid during the second meeting after a stomach reduction.
 To start, please enter the general patient information first.'''
-ALLOWED_GENDERS = ["male", "Male", "female", "Female", "other", "Other"]
+ALLOWED_GENDERS = ["MALE", "FEMALE", "OTHER"]
 
+#ADVICES AND ALARMS
+WEIGHT_LOSS_INSUFFICIENT_ALARM = ""
+WEIGHT_LOSS_HIGH_ALARM = ""
+LOW_BMI_ALARM = ""
+INCREASE_PROTEIN_INTAKE = ""
+SUPPLEMENT_B11 = ""
+SUPPLEMENT_B12 = ""
+SPECIALIST_ALARM_B12 = ""
+SUPPLEMENT_D = ""
+SUPPLEMENT_IRON = ""
+INCREASE_FOOD_PROTEIN_AMOUNT = ""
+INCREASE_VALUABLE_CARB_INTAKE = ""
+INCREASE_UNSATURATED_FAT_INTAKE = ""
+SPREAD_PROTEIN_INTAKE = ""
+SPREAD_CARB_INTAKE = ""
+SPREAD_FAT_INTAKE = ""
+WATER_ALARM = ""
+SUPPLEMENT_MULTIVITAMINS = ""
+MOVE_ENOUGH = ""
+INSUFFICIENT_DEFECATION_ALARM = ""
+HIGH_DEFECATION_ALARM = ""
+EATING_MOMENTS_6_11 = ""
+DIVIDE_FOOD_DRINK_INTAKE = ""
+SLOW_DOWN_INTAKE = ""
+SOURCE_ALARM = ""
+LOWER_FAT_INTAKE = ""
+INCREASE_INTAKE = ""
+HEALTH_ALARM = ""
 
 ''' -| PROGRAM FUNCTIONS |- '''
 
@@ -91,9 +119,123 @@ def gather_complaints():
     nausea = True if input("Does the patient feel dizzy or nauseous frequently? (True or False)\n") in ["True", "true"] else False
     return stomach_ache, vomiting, feeling_cold, hair_loss, dumping, fatigue, nausea
 
+
 def give_advice(patient:Patient):
     #all the rules
-    if (patient.weight_at_surgery - patient.current_weight) /
+    if (patient.weight_at_surgery - patient.current_weight) / patient.weeks_after_surgery < 0.8:
+        print(WEIGHT_LOSS_INSUFFICIENT_ALARM)
+    elif (patient.weight_at_surgery - patient.current_weight) / patient.weeks_after_surgery > 1.5:
+        print(WEIGHT_LOSS_HIGH_ALARM)
+
+    if patient.current_weight / (patient.height ** 2) < 27:
+        print(LOW_BMI_ALARM)
+
+    if patient.protein < 60:
+        print(INCREASE_PROTEIN_INTAKE)
+
+    if patient.B11 < 5.9:
+        print(SUPPLEMENT_B11)
+
+    if patient.B12 < 200 and patient.supplements_B12 == False:
+        print(SUPPLEMENT_B12)
+    elif patient.B12 < 200 and patient.supplements_B12 == True:
+        print(SPECIALIST_ALARM_B12)
+
+    if patient.D < 20:
+        print(SUPPLEMENT_D)
+
+    if patient.iron < 14 and patient.gender == "MALE":
+        print(SUPPLEMENT_IRON)
+    elif patient.iron < 10 and patient.gender == "FEMALE":
+        print(SUPPLEMENT_IRON)
+
+    if  patient.protein_intake < (0.8 * (patient.length ** 2) * 27) and patient.protein_source == "ANIMAL":
+        print(INCREASE_PROTEIN_INTAKE)
+    if patient.protein_source == "PLANT": #vegetarian?
+        print(INCREASE_FOOD_PROTEIN_AMOUNT)
+
+    if patient.carb_intake_valuable == False:
+        print(INCREASE_VALUABLE_CARB_INTAKE) #?????
+
+    if patient.unsat_fat_intake_sufficient == False:
+        print(INCREASE_UNSATURATED_FAT_INTAKE)
+
+    #intake spreads
+    if patient.protein_intake_spread == False:
+        print(SPREAD_PROTEIN_INTAKE)
+    if patient.carb_intake_spread == False:
+        print(SPREAD_CARB_INTAKE)
+    if patient.fat_intake_spread == False:
+        print(SPREAD_FAT_INTAKE)
+
+    if patient.water_possibility == False:
+        print(WATER_ALARM)
+
+    if patient.supplements_vitamins == False:
+        print(SUPPLEMENT_MULTIVITAMINS)
+    if patient.supplements_B12 == False:
+        print(SUPPLEMENT_B12)
+
+    if patient.enough_movement == False:
+        print(MOVE_ENOUGH) #what is enough?
+
+    if patient.defecation_freq < 2:
+        print(INSUFFICIENT_DEFECATION_ALARM)
+    elif patient.defecation_freq > 14:
+        print(HIGH_DEFECATION_ALARM)
+
+    if patient.eating_moments < 6:
+        print(EATING_MOMENTS_6_11)
+    if patient.divided_intake == False:
+        print(DIVIDE_FOOD_DRINK_INTAKE)
+    if patient.slow_intake == False:
+        print(SLOW_DOWN_INTAKE)
+
+    #complaints
+    if patient.stomach_ache == True:
+        if patient.slow_intake == False:
+            print(SLOW_DOWN_INTAKE)
+            #also add why?
+        if patient.eating_moments < 6:
+            print(EATING_MOMENTS_6_11)
+        print(SOURCE_ALARM) #?????
+
+    if patient.nausea == True:
+        if patient.slow_intake == False:
+            print(SLOW_DOWN_INTAKE) #says calm = false??
+        if patient.eating_moments < 6:
+            print(EATING_MOMENTS_6_11)
+        if patient.fat_intake > 50:
+            print(LOWER_FAT_INTAKE) #to below 50g?
+        print(SOURCE_ALARM)
+
+    if patient.vomiting == True:
+        if patient.divided_intake == False:
+            print(DIVIDE_FOOD_DRINK_INTAKE)
+        if patient.slow_intake == False:
+            print(SLOW_DOWN_INTAKE) #again, calm=false??
+        if patient.eating_moments < 6:
+            print(EATING_MOMENTS_6_11)
+        print(SOURCE_ALARM)
+
+    if patient.feeling_cold == True or patient.fatigue == True:
+        if ((patient.weight_at_surgery - patient.current_weight) / patient.weeks_after_surgery) > 1.5:
+            print(INCREASE_INTAKE)
+        print(HEALTH_ALARM)
+
+    if patient.hair_loss == True:
+        if patient.protein < 60:
+            print(INCREASE_PROTEIN_INTAKE)
+        if patient.supplements_multivitamins == False:
+            print(SUPPLEMENT_MULTIVITAMINS)
+        print(HEALTH_ALARM)
+
+    if patient.dumping == True:
+        if patient.carb_intake_valuable == False:
+            print(INCREASE_VALUABLE_CARB_INTAKE)
+        print(HEALTH_ALARM)
+
+
 
 
 ''' -| START OF PROGRAM |- '''
