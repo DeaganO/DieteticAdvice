@@ -1,0 +1,117 @@
+C:\ProgramData\Anaconda3\python.exe D:/dietetics/advice/system.py
+Welcome to the dietetic advisory aiding system!
+This system is made to aid during the second meeting after a stomach reduction.
+To start, please enter the general patient information first.
+First and nast name:
+Deagan Otterspeer
+Gender (MALE / FEMALE / OTHER):
+MALE
+Height in m:
+1.88
+Number of weeks since surgery:
+2
+The patient's weight at time of surgery in kg:
+82
+Current weight in kg:
+80
+You have entered the following patient information:
+Deagan Otterspeer
+MALE
+1.88
+2.0
+82.0
+80.0
+
+Before moving on to the patient-provided information, please enter the lab values.
+Please enter the date of the blood test:
+19-12-2018
+Please enter the protein levels (in g/l):
+55
+Please enter the vitamin B11 levels (in nmol/l):
+11
+Please enter te vitamin B12 levels (in pmol/l):
+180
+Please enter the vitamin D levels (in nmol/l):
+18
+Please enter the iron levels (in mmol/l):
+14
+You have entered the following lab values:
+19-12-2018
+55.0
+11.0
+180.0
+18.0
+14.0
+
+Next, please gather monitoring values of nutritional intake per day from the patient.
+Please ask the patient how much water he drinks per day (in ml):
+2000
+Is the patient able to drink water? (T or F)
+T
+Does the patient take multivitamins? (T or F)
+F
+Does the patient supplement additional B12? (T or F)
+T
+Enter the daily protein intake of the patient (in grams):
+80
+What is the patient's main source of protein? (ANIMAL or PLANT)
+PLANT
+Is the patient's protein intake spread out over several meals? (T or F)
+T
+Can the patient's carb intake type be considered valuable? (T or F)
+T
+Is the patient's carb intake spread out over several meals? (T or F)
+T
+Enter the daily fat intake of the patient (in grams):
+120
+Is the patient's fat intake spread out over several meals? (T or F)
+T
+Does the patient take in sufficient amounts of unsaturated fat? (T or F)
+T
+Does the patient move at least 5 times per week? T or F)
+F
+Per week, how often does the patient defecate?
+4
+Does the patient's defecation appear to have the right consistency? (T or F)
+T
+How often does the patient eat per day?
+4
+Does the patient eat and drink separately? (T or F)
+T
+Does the patient take sufficient time to take in food? (T or F)
+T
+You have entered the following intake variables given by the patient: 
+2000.0
+True
+True
+80.0
+PLANT
+True
+True
+True
+True
+True
+False
+120.0
+False
+4.0
+True
+4.0
+True
+True
+
+Finally, enter the complaints the patient mentions, after which all possibilities will be evaluated and advice will be constructed.
+Does the patient experience stomach aches? (T or F)
+F
+Does the patient vomit frequently? (T or F)
+F
+Does the patient feel constantly cold? (T or F)
+F
+Has the patient lost considerable hair? (T or F)
+F
+Does the patient mention problems which hint at gastric dumping syndrome? (T or F)
+T
+Does the patient feel continuously tired? (T or F)
+F
+Does the patient feel dizzy or nauseous frequently? (T or F)
+T

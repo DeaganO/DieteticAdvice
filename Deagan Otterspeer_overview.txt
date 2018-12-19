@@ -1,0 +1,47 @@
+GENERAL PATIENT INFORMATION:
+- Name: Deagan Otterspeer, MALE, height: 1.88
+- Weeks since surgery: 2.0
+- Weight at surgery: 82.0, current weight: 80.0
+
+LAB VALUES OF 19-12-2018:
+- Protein (g/L): 55.0
+- Vitamin B11 (nmol/L): 11.0
+- Vitamin B12 (pmol/L): 180.0
+- Vitamin D (nmol/L): 18.0
+- Iron (mmol/L): 14.0
+
+INTAKE OR MEETING VARIABLES GIVEN BY THE PATIENT:
+- Water p/d (ml): 2000.0, able to drink: True
+- Supplements multivitamins: False, supplements extra B12: True
+- Protein intake p/d (g): 80.0, source: PLANT, spread: True
+- Fat intake p/d (g): 120.0, sufficient unsaturated: True, spread: True
+- Carb intake valuable: True, spread: True
+- Slow intake: True, nr eating moments p/d: 4.0, divided: True
+- Defecation frequency p/w: 4.0, right consistency: True
+- Enough movement: False
+
+THE PATIENT MENTIONS THE FOLLOWING COMPLAINTS::
+- Stomach ache: False
+- Vomiting: False
+- Feeling cold: False, Fatigue: False
+- Hair loss: False
+- Gastric Dumping Syndrome: True
+- Nausea: True
+
+THE SYSTEM CONSTRUCTED THE FOLLOWING ADVICE FOR THE PATIENT:
+ALL GENERAL ADVICE BASED ON GIVEN VALUES: 
+- Vitamin D blood value is insufficient, more nutrition rich in vitamin D, or additional vitamin D supplementation is required.
+- The protein intake is insufficient, increase protein intake through nutrition.
+- The patient's eating moment frequency is too low. The patient needs to spread out his/her meals to at least 6 meals per day.
+- The patient is not taking multivitamines, multivitamines supplementation is required.
+- The patient does not exercise enough. The advice is to move 30 minutes to an hour, 5 times a week, with moderate intensity.
+
+ALL ALARMS RAISED DURING THE MEETING: 
+- The patient suffers from one or more complaints (stomach ache, nausea, or vomiting). This complaint is most likely caused by a specific nutritient, further investigation is required.
+- The BMI of the patient is below 27, dietetic supervision is required.
+- Vitamin B12 blood value is insufficient, while vitamin B12 supplementation is taken. Additional B12 injections are required, refer to an internist.
+- The patient suffers from one or more complaints which are not easily explained by the patient his/her food intake (feeling cold, fatigue, hair loss, or dumping). Additional investigation is required.
+
+ALL COMPLAINT-SPECIFIC ADVICE: 
+- The patient's eating moment frequency is too low. The patient needs to spread out his/her meals to at least 6 meals per day.
+- The fat intake of the patient is too high, a lower fat intake is advised.
